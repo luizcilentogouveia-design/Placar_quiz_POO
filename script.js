@@ -1,7 +1,5 @@
-// Array para armazenar os jogadores
 let jogadores = [];
 
-// Selecionando os elementos do HTML
 const inputNome = document.getElementById('nomeJogador');
 const btnAdicionar = document.getElementById('btnAdicionar');
 const listaJogadores = document.getElementById('listaJogadores');
@@ -10,7 +8,6 @@ const listaJogadores = document.getElementById('listaJogadores');
 function carregarDados() {
     const dadosSalvos = localStorage.getItem('placar_jogadores');
     if (dadosSalvos) {
-        // Converte o texto salvo de volta para um array/objeto do JavaScript
         jogadores = JSON.parse(dadosSalvos);
         renderizarPlacar();
     }
@@ -18,7 +15,6 @@ function carregarDados() {
 
 // 2. SALVAR OS DADOS NO NAVEGADOR
 function salvarDados() {
-    // O localStorage só guarda textos, por isso usamos JSON.stringify para transformar o array em texto
     localStorage.setItem('placar_jogadores', JSON.stringify(jogadores));
 }
 
@@ -39,22 +35,22 @@ btnAdicionar.addEventListener('click', () => {
     jogadores.push(novoJogador);
     inputNome.value = "";
 
-    salvarDados(); // Salva após adicionar
+    salvarDados(); 
     renderizarPlacar();
 });
 
-// Função para incrementar os pontos (+1)
+// Função para incrementar os pontos 
 function adicionarPonto(index) {
     jogadores[index].pontos += 1;
-    salvarDados(); // Salva após alterar pontos
+    salvarDados(); 
     renderizarPlacar();
 }
 
-// Função para decrementar os pontos (-1)
+// Função para decrementar os pontos 
 function removerPonto(index) {
     if (jogadores[index].pontos > 0) {
         jogadores[index].pontos -= 1;
-        salvarDados(); // Salva após alterar pontos
+        salvarDados(); 
         renderizarPlacar();
     }
 }
@@ -63,7 +59,7 @@ function removerPonto(index) {
 function removerJogador(index) {
     if (confirm(`Tem certeza que deseja remover ${jogadores[index].nome}?`)) {
         jogadores.splice(index, 1);
-        salvarDados(); // Salva após excluir
+        salvarDados(); 
         renderizarPlacar();
     }
 }
@@ -90,5 +86,5 @@ function renderizarPlacar() {
     });
 }
 
-// Executa a função de carregar assim que o script é lido
+
 carregarDados();
