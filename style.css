@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-grupo {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+}
+
+.info-jogador {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.acoes-jogador button {
+    background-color: #007bff;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.acoes-jogador button:hover {
+    background-color: #0056b3;
+}
+/* Estilos extras para os novos botões */
+.acoes-jogador {
+    display: flex;
+    gap: 5px; /* Espaço entre os botões */
+}
+
+.acoes-jogador button {
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+/* Botão de +1 (Azul ou verde) */
+.btn-mais {
+    background-color: #007bff;
+}
+.btn-mais:hover {
+    background-color: #0056b3;
+}
+
+/* Botão de -1 (Laranja/Amarelo) */
+.btn-menos {
+    background-color: #ffc107;
+    color: #333; /* Texto escuro para contraste */
+}
+.btn-menos:hover {
+    background-color: #e0a800;
+}
+
+/* Botão de Excluir (Vermelho) */
+.btn-remover {
+    background-color: #dc3545;
+}
+.btn-remover:hover {
+    background-color: #c82333;
+}
